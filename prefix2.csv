@@ -1,0 +1,22 @@
+PREFIX 2,EFFECT 1,EFFECT 2,EFFECT 3,POWER 1,POWER 2,POWER 3,COST
+Razor ,Damage,,,1,,,0
+Lethal ,Damage,,,3,,,1
+Streamlined ,,,,,,,-1
+Curative ,Healing,,,1,,,1
+Sorcerous ,Buff Healing,Buff Defense,,1,1,,2
+Confounding ,Debuff Healing,Debuff Defense,,1,1,,2
+Reinforced ,Defense,,,1,,,0
+Observant ,Buff Defense,,,1,,,0
+Royal ,Damage,Defense,,3,3,,3
+Shamanic ,Healing,Buff Healing,,1,1,,1
+Hardened ,Defense,,,2,,,0
+Screaming ,Buff Damage,Damage,,2,4,,3
+Constructive ,Healing,Buff Defense,,1,1,,1
+,,,,,,,0
+Jumping ,Defense,Buff Damage,,2,1,,2
+Omnipotent ,Damage,Defense,Healing,2,2,2,3
+Destructive ,Damage,Reduce Deck,,1,1,,2
+Innovative ,Healing,Boost Deck,,1,1,,3
+Grievous ,Debuff Damage,Reduce Energy,,1,1,,3
+Fortifying ,Defense,Boost Energy,,1,1,,2
+Hyper-Streamlined ,,,,,,,-2

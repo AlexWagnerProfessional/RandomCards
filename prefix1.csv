@@ -1,0 +1,17 @@
+PREFIX 1,EFFECT 1,EFFECT 2,EFFECT 3,POWER 1,POWER 2,POWER 3,COST
+Sharp ,Damage,,,1,,,0
+The Deadly ,Damage,,,3,,,1
+Efficient ,,,,,,,-1
+Restorative ,Healing,,,1,,,0
+Mystical ,Buff Healing,Buff Defense,,1,1,,2
+Incomprehensible ,Debuff Healing,Debuff Defense,,1,1,,2
+Studded ,Defense,,,1,,,0
+Erudite ,Buff Healing,,,1,,,0
+The King�s ,Damage,Defense,,3,3,,3
+Ritualistic ,Healing,Buff Healing,,1,1,,1
+The Squire�s ,Defense,,,1,,,0
+Unstoppable ,Buff Damage,Damage,,2,4,,3
+Transferring ,Boost Energy,Reduce Energy,,1,1,,4
+Larcenous ,Boost Deck,Reduce Deck,,1,1,,4
+Hyper-Efficient ,,,,,,,-2
+Gentle ,Healing,,,1,,,-1

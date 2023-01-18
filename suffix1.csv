@@ -1,0 +1,24 @@
+SUFFIX 1,EFFECT 1,EFFECT 2,EFFECT 3,POWER 1,POWER 2,POWER 3,COST
+ of Enraging ,Damage,,,1,,,0
+", the Bringer of ",Buff Damage,,,1,,,0
+ of Hyper ,Buff Defense,Buff Damage,,1,1,,1
+ of ,,,,,,,0
+ of Efficient ,,,,,,,-1
+ of Flowing ,Damage,,,1,,,-1
+ of Extremely Efficient ,,,,,,,-2
+ of Spiked ,Damage,Defense,,2,1,,1
+", the Foreteller of ",Buff Healing,Debuff Damage,,1,1,,2
+", the Arbiter of ",Buff Defense,Debuff Defense,,1,1,,1
+ of Tyrannical ,Debuff Damage,Debuff Defense,,2,2,,3
+ of Crazed ,Buff Damage,Damage,,1,2,,2
+ of Armored ,Defense,,,2,,,1
+ of Plated ,Defense,,,1,,,0
+ of Agile ,Defense,,,1,,,-1
+ of Heretical ,Buff Damage,Debuff Damage,,2,1,,1
+ of Ferocious ,Damage,,,4,,,2
+ of Empowering ,Boost Energy,,,1,,,2
+ of Expanding ,Boost Deck,,,1,,,2
+ of Shrinking ,Reduce Deck,,,1,,,2
+ of Draining ,Reduce Energy,,,1,,,2
+ of Pearlescent ,Healing,,,2,,,1
+ of Smooth ,,,,,,,-1

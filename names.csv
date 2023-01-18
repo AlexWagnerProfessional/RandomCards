@@ -1,0 +1,16 @@
+NAME,EFFECT 1,EFFECT 2,EFFECT 3,POWER 1,POWER 2,POWER 3,COST
+Sword,Damage,,,2,,,1
+Cannon,Damage,,,4,,,2
+Judge,Damage,Debuff Defense,,1,1,,1
+Medicine Pouch,Healing,,,1,,,1
+Sorceror,Debuff Damage,Buff Defense,,1,1,,2
+Wizard,Buff Damage,Debuff Healing,,1,1,,2
+Shield,Defense,,,2,,,1
+Platemail,Defense,,,4,,,2
+Gauntlet,Defense,Damage,,1,1,,1
+Shaman,Healing,Buff Healing,,3,1,,3
+Witch,Debuff Damage,Debuff Defense,,2,1,,3
+Battle Standard,Buff Damage,Buff Defense,,1,2,,3
+Warhammer,Damage,Buff Damage,,2,1,,2
+Font,Healing,,,1,,,0
+Pauldron,Defense,,,1,,,0

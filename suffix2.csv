@@ -1,0 +1,20 @@
+SUFFIX 2,EFFECT 1,EFFECT 2,EFFECT 3,POWER 1,POWER 2,POWER 3,COST
+Doom,Damage,,,3,,,1
+Density,Damage,Defense,,1,1,,0
+Gravity,Buff Defense,Buff Damage,,1,1,,1
+Rebirth,Healing,,,3,,,2
+Understanding,Buff Defense,,,1,,,0
+Armageddon,Damage,,,8,,,4
+Efficiency,,,,,,,-1
+Superior Efficiency,,,,,,,-2
+Hoarfrost,Buff Defense,Defense,,2,2,,3
+Befuddling,Debuff Damage,,,1,,,0
+Royalty,Healing,Defense,,1,1,,1
+War,Buff Damage,Damage,,1,2,,2
+Thorns,Damage,,,1,,,0
+Skewers,Damage,,,3,,,1
+Sapping,Reduce Energy,,,1,,,2
+Cages,Reduce Deck,,,1,,,2
+Enlightenment,Boost Energy,,,1,,,2
+Expansion,Boost Deck,,,1,,,2
+Peace,Buff Healing,,,1,,,0
