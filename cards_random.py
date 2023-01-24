@@ -936,10 +936,9 @@ end_button_pressed = False # False until the player clicks a certain button
 
 def pressEndButton():
     global end_button_pressed
-    #global card_pressed
-    end_button_pressed.set(True)
-    print("Your turn will end after you play your next card.")
-    #card_pressed.set(-2)
+    global card_pressed
+    end_button_pressed.set(True) # Will ignore remaining energy and cards and let the opponent play their turn
+    card_pressed.set(1) # Updating this to anything will cause the turn to progress
 
 
 
@@ -950,9 +949,14 @@ def battle():
     global player
     global opponent
     global end_button_pressed
-    #global card_pressed # Just in case
+    global card_pressed # Helps the pressEndButton function integrate with this one
     global main # I think this affects the TKinter window successfully...
     global frame_cards
+
+    # Upon starting the battle, we remove the Begin button and replace it with the End Turn button.
+    end_button.pack() 
+    battle_button.destroy()
+    
 
     # Updating the labels will be done by the now-separate function, updateLabels().
 
@@ -1017,7 +1021,12 @@ def battle():
     
         card_pressed.set(1) # Just set it so it notices this function ran; don't rely on card index
 
-    
+    def endCleanup():
+        # Just a few commands to remove some buttons once the game is over,
+        # making it clearer that play has concluded.
+        for b in this_turn_deck_buttons:
+            b.destroy()
+        end_button.destroy()
 
     while(battle_continue):
         # Set current values to what they should be at the start of each turn
@@ -1047,6 +1056,8 @@ def battle():
             b.destroy()
         
         this_turn_deck_buttons = [] # A fresh list of buttons
+
+        
 
         # Create a button for every card and stick it in the list of buttons.
         #card_index = 0 # Keep track of which index it is
@@ -1129,6 +1140,7 @@ def battle():
         if opponent.health <= 0 or opponent.energy <= 0 or opponent.deck <= 0:
             battle_continue = False
             print("You win!")
+            endCleanup()
             break
 
         
@@ -1158,6 +1170,7 @@ def battle():
         if player.health <= 0 or player.energy <= 0 or player.deck <= 0:
             battle_continue = False
             print("Your opponent wins!")
+            endCleanup()
             break
 
 
@@ -1175,15 +1188,20 @@ main.geometry("500x600")
 # A frame to hold the card buttons
 frame_cards = tkinter.Frame(main)
 
+# A frame to hold the canvas, start button, and end turn button
+frame_middle = tkinter.Frame(main)
+
 # Canvas for weird art
-canv = tkinter.Canvas(main, bd=20, width=170, height=145, bg="blue")
+canv = tkinter.Canvas(frame_middle, bd=20, width=170, height=145, bg="blue")
 canv.create_oval(25, 35, 70, 75, fill="red")
 #canv.create_text()
 
+
+
 # Button creation
 #play_button = tkinter.Button(main, command=singleCardTestGlobal, fg="#FFAABB", bg="gray", activebackground="white", activeforeground="orange", cursor="dot", text="FIGHT!!!!!")
-battle_button = tkinter.Button(main, command=battle, fg="#FFAABB", bg="gray", activebackground="white", activeforeground="orange", cursor="dot", text="Begin!")
-end_button = tkinter.Button(main, command=pressEndButton, fg="#FFAABB", bg="black", activebackground="gray", activeforeground="red", cursor="dot", text="End Turn")
+battle_button = tkinter.Button(frame_middle, command=battle, fg="#FFAABB", bg="gray", activebackground="white", activeforeground="orange", cursor="dot", text="Begin!")
+end_button = tkinter.Button(frame_middle, command=pressEndButton, fg="#FFAABB", bg="black", activebackground="gray", activeforeground="red", cursor="dot", text="End Turn")
 
 
 # LABELS FOR STATS
@@ -1222,10 +1240,11 @@ opponent_buff_healing = tkinter.Label(frame_right, text = "Healing Buff: " + str
 #play_button_text.pack()
 
 frame_cards.pack(side = tkinter.TOP)
+frame_middle.pack(side = tkinter.TOP)
 canv.pack()
 #play_button.pack()
 battle_button.pack()
-end_button.pack()
+#end_button.pack()
 
 #player_stats.pack()
 
